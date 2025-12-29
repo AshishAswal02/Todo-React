@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import "./../styles/signup.css"
 import { useNavigate } from "react-router"
 import api from "./../axiosApi/api"
+import { useAuth } from "../AuthContext"
 
 const Signup = () => {
   const {setIsAuth} = useAuth()
@@ -18,7 +19,7 @@ const Signup = () => {
 
   useEffect(() => {
     if (sessionStorage.getItem("userInfo")) {
-      navigate("/list")
+      navigate("/")
     }
   }, [navigate])
 

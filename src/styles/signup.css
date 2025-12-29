@@ -1,0 +1,118 @@
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.signup-card {
+  background: #FAFAFA;
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-card h2 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.signup-card p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.signup-card input {
+  margin-bottom: 1rem;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.signup-card input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.signup-card button {
+  padding: 12px;
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.signup-card button:hover {
+  background: #5a67d8;
+}
+
+.login-text {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-text a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Error message */
+.error {
+  color: #d62828;
+  font-size: 12px;
+  margin-bottom: 12px;
+  padding-left: 4px;
+}
+
+/* Highlight input when error exists */
+.signup-card input.error-input {
+  border-color: #d62828;
+  background: #fff5f5;
+}
+
+/* Button */
+.signup-card button {
+  margin-top: 12px;
+  padding: 14px;
+  background: #5f7bd9;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-card button:hover {
+  background: #4f6bd1;
+}
+
+.signup-card button:disabled {
+  background: #9aa9e8;
+  cursor: not-allowed;
+}
+
+/* Footer text */
+.login-text {
+  margin-top: 1.25rem;
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-text a {
+  color: #5f7bd9;
+  text-decoration: none;
+  font-weight: 600;
+}

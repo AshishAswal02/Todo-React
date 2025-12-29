@@ -1,0 +1,60 @@
+.notfound {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* App gradient */
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.card {
+  text-align: center;
+  padding: 3rem 3.5rem;
+  border-radius: 18px;
+
+  /* light card */
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.card h1 {
+  font-size: 7.5rem;
+  margin: 0;
+
+  /* accent gradient */
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.card h2 {
+  margin-top: 0.75rem;
+  font-size: 1.8rem;
+  color: #1f2937;
+}
+
+.card p {
+  margin-top: 0.75rem;
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 1.75rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.4);
+}

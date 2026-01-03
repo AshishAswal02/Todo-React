@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import "./../styles/signup.css"
 import { useNavigate } from "react-router"
 import api from "./../axiosApi/api"
 import { useAuth } from "../AuthContext"
 
 const Signup = () => {
-  const {setIsAuth} = useAuth()
+  const { setIsAuth } = useAuth()
   const navigate = useNavigate()
   const [formData, setFormData] = useState({
     name: "",
@@ -16,12 +16,6 @@ const Signup = () => {
 
   const [errors, setErrors] = useState({})
   const [loading, setLoading] = useState(false)
-
-  useEffect(() => {
-    if (sessionStorage.getItem("userInfo")) {
-      navigate("/")
-    }
-  }, [navigate])
 
   const validate = () => {
     const newErrors = {}
@@ -81,7 +75,7 @@ const Signup = () => {
 
     try {
       setLoading(true)
-       const res = await api.post("/signup", formData)
+      const res = await api.post("/signup", formData)
       alert("Signup successful")
 
       sessionStorage.setItem("userInfo", JSON.stringify(res.data.userInfo))

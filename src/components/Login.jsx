@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import "./../styles/login.css"
 import { useNavigate } from "react-router"
-import api from './../axiosApi/api'
+import api from "./../axiosApi/api"
 import { useAuth } from "../AuthContext"
 
 const Login = () => {
   const navigate = useNavigate()
-  const {setIsAuth} = useAuth()
+  const { setIsAuth } = useAuth()
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -14,12 +14,6 @@ const Login = () => {
 
   const [errors, setErrors] = useState({})
   const [loading, setLoading] = useState(false)
-
-  useEffect(() => {
-    if (sessionStorage.getItem("userInfo")) {
-      navigate("/")
-    }
-  }, [navigate])
 
   const validate = () => {
     const newErrors = {}

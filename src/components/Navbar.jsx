@@ -5,8 +5,10 @@ import { createPortal } from "react-dom"
 import { useAuth } from "../AuthContext.jsx"
 
 const Navbar = () => {
-  const { logout} = useAuth()
+  const { logout } = useAuth()
+  const isAuth = sessionStorage.getItem("userInfo")
 
+  if (!isAuth || (isAuth && (location.pathname === "/login" || location.pathname === "/signup"))) return null
 
   return createPortal(
     <nav className="navbar">

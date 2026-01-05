@@ -34,7 +34,7 @@ const App = () => {
 
   return (
     <>
-      {/* <Protected children={<Navbar />} /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Protected children={<List />} />} />
         <Route path="/add" element={<Protected children={<Add />} />} />
